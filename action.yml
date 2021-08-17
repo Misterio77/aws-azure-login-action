@@ -1,0 +1,27 @@
+name: 'AWS credentials from Azure AD'
+descriptions: 'Gets AWS credentials from your Azure AD SSO login'
+inputs:
+  tenant-id:
+    description: 'Which tenant ID to use'
+    required: true
+  app-id:
+    description: 'Which app ID to use'
+    required: true
+  username:
+    description: 'Which username to use'
+    required: false
+  password:
+    description: 'Which password to use'
+    required: false
+  tfa-secret:
+    description: 'If using TOTP, specify generator secret'
+    required: false
+  role-arn:
+    description: 'If you have more than one, you can specify which role to use'
+    required: false
+  duration:
+    descriptions: 'Specify how many hours should the credentials last for'
+    required: false
+runs:
+  using: 'node12'
+  main: 'dist/main.js'

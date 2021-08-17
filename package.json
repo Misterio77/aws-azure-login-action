@@ -1,0 +1,35 @@
+{
+  "name": "aws-azure-login-action",
+  "version": "0.1.0",
+  "description": "GitHub action for configuring AWS credentials from AD SSO credentials",
+  "repository": {
+    "url": "https://github.com/Misterio77/aws-azure-login-action",
+    "type": "git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write '**/*.ts'",
+    "format-check": "prettier --check '**/*.ts'",
+    "lint": "eslint src/**/*.ts",
+    "package": "ncc build"
+  },
+  "author": "Gabriel Fontes (Misterio77)",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@actions/core": "^1.1.0",
+    "aws-azure-login": "https://github.com/Misterio77/aws-azure-login"
+  },
+  "devDependencies": {
+    "@types/node": "^16.3.3",
+    "@typescript-eslint/eslint-plugin": "^4.28.0",
+    "@typescript-eslint/parser": "^4.28.0",
+    "@vercel/ncc": "^0.29.0",
+    "eslint": "^7.31.0",
+    "eslint-plugin-github": "^4.1.1",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.3.2",
+    "ts-node-dev": "^1.1.1",
+    "typescript": "^4.3.4"
+  }
+}
